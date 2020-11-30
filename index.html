@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fun, free  online sports photo flashcards for learning English vocabulary">
+    <meta name="keywords" content="Sports flashcards goal score online">
+    <title>Sports Flashcards</title>
+    <link rel="icon" type="image/png"
+    href="favicon.png";
+  />
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="csi.min.js"></script>
+</head>
+<body>
+
+  <div class="loader-div" id="loaderDiv" onload = "checkForTop();">
+    <div class="loader-container ghost">
+      <img src="img/basketball-ball.png" alt=""> 
+    </div>
+    <div class="basediv"></div>
+  </div>
+
+    <div class="nav-bar" id="navbar">
+        <a href="index.html" class="nav-bar__logo">
+          <svg class="icon-header nav-bar__logo-img">
+            <use xlink:href="sprite2.svg#Buho" onclick="scrollUp()">
+            </use>
+          </svg>    </a>
+        <h3 class="nav-bar__title">Esl-Ology.Com</h3>
+        <div class="nav-bar__title-page">
+          <span class="nav-bar__title-page-main" id="pageTitle">SPORTS FLASHCARDS</span>
+      </div>
+      <div class="nav-bar__links">
+        <a href="index.html" class="nav-bar__link link3">Home</a>
+        <svg viewBox="0 0 100 80" width="40" height="20" onclick="toggler();" id="menu" class="menu">
+          <rect width="100" height="12"></rect>
+          <rect y="30" width="100" height="12"></rect>
+          <rect y="60" width="100" height="12"></rect>
+        </svg>     
+      </div>
+    </div>
+
+    <div id="wrapper" class="wrapper">
+
+          
+      <div class="sidebar-container" id="sidebar">
+        <div data-include="sidebar.html">
+        </div>
+      </div>
+
+        <div class="introduction">
+          <div class="introduction__img" id="mainpic">
+            <img src="img/player.png" onclick="kickball();" alt="decorative">
+            <div id="ball" class="ball">
+            <img src="img/ball.png" alt="decorative">
+            </div>
+          </div>
+          <div class="introduction__text">
+            <h1>PLAYING TO WIN</h1>
+            <p>Once students have learned the basics of English sports vocabulary — hopefully it won't take them long, as so many words are the same or similar — a quick game of sports charades can help students retain sports vocabulary, while hangman, <a href="matching-sports.html">memory</a> and <a href="bingo-sports.html">bingo</a> can help it all stick!    </p>
+          </div>
+        </div>
+
+        <div class="main">
+          <div id="overlay" class="overlay">
+            <img id="image-art" class="image-art" src="img/archery.jpg" alt="">
+            <div class="after">
+            </div>
+              <p id="image-text" class="image-text">archery</p>
+          </div>
+          <div class="buttons">
+            <div class="buttons__icon" onclick="goBackwards()">
+              <img class="buttons__icon-img arrow1" src="img/right-arrow.png" alt="">
+            </div>
+              <p class="count" id="count">2/20</p>
+            <div class="buttons__icon" onclick="goForwards()">
+              <img class="buttons__icon-img arrow2" src="img/right-arrow.png" alt="">
+            </div>
+          </div>
+        </div>
+
+      <div class="links">
+        <p class="links__text">
+          Try some other TEFL games.
+        </p>
+        <div class="links__images">
+          <div class="links__images-1 figure">
+            <a href="frogify-halloween.html">
+            <img src="img/frogify-image.jpg" alt=""></a>
+              <figcaption>Try a Scary Halloween Game</figcaption>
+          </div>
+          <div class="links__images-1 figure">
+            <a href="bingo-transport.html">
+            <img src="img/vehiclesBing.jpg" alt=""></a>
+              <figcaption>Vehicles Bingo with Printable Cards</figcaption>
+          </div>
+      </div>
+
+
+    </div>
+</div>
+    <footer class="footer">
+        <div class="footer__copyright" id="footer">
+          <p>Copyright © 2020 Esl-ology.com & copyright owners.</p>
+          <p>Image credits <a href="sports-flashcard-credits.html">here</a>. Thanks, guys!</p>
+        </div>
+    </footer>
+
+  <div class="hidden"><img src="sprite2.svg" style="display: none">
+      <script>
+    <!--//--><![CDATA[//><!--
+    var images = new Array();
+      function preload(){
+        for(i=0; i<preload.arguments.length; i++){
+          images[i] = new Image();
+          images[i].src = preload.arguments[i];
+        }
+      }
+    preload(
+      "img/archery.jpg",
+    "img/badminton.jpg",
+    "img/basketball.jpg",
+    "img/boxing.jpg",
+    "img/climbing.jpg",
+    "img/darts.jpg",
+    "img/diving.jpg",
+    "img/driving.jpg",
+    "img/football.jpg",
+    "img/golf.jpg",
+    "img/gymnastics.jpg",
+    "img/hang-gliding.jpg",
+    "img/hiking.jpg",
+    "img/hockey.jpg",
+    "img/horse-riding.jpg",
+    "img/ice-skating.jpg",
+    "img/karate.jpg",
+    "img/paddle-surfing.jpg",
+    "img/rugby.jpg",
+    "img/running.jpg",
+    "img/sailing.jpg",
+    "img/skiing.jpg",
+    "img/surfing.jpg",
+    "img/swimming.jpg",
+    "img/table-tennis.jpg",
+    "img/tennis.jpg",
+    "img/weight-lifting.jpg",
+    "img/windsurfing.jpg",
+    "img/yoga.jpg"
+    )
+      //--><!]]>
+    </script>
+  </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
