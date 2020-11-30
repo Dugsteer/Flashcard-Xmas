@@ -64,12 +64,10 @@ h4 {
   grid-column: 2/3;
   width: 100%;
   margin: auto;
-  margin-top: 3rem;
-  height: 5vw; }
+  margin-top: 4rem; }
   .buttons__icon {
-    height: 4rem;
     width: 4rem;
-    margin: 0 5rem;
+    margin: 0 3rem;
     justify-self: center; }
     .buttons__icon:hover {
       transform: scale(1.1); }
@@ -305,9 +303,6 @@ h4 {
 .block {
   display: block; }
 
-.sidebar__subtitle:first-of-type {
-  background: #F75F1C; }
-
 .icon {
   margin-right: 3rem; }
 
@@ -336,7 +331,6 @@ h4 {
   @media only screen and (max-width: 37.5em) {
     .extra {
       top: 60%;
-      origin: center;
       width: 320px;
       height: 700px; } }
 
@@ -410,7 +404,7 @@ h4 {
   cursor: pointer; }
 
 .nav-bar {
-  background-color: #368cbf;
+  background-color: #ff0000;
   color: #fff;
   display: grid;
   height: 7rem;
@@ -512,50 +506,47 @@ h4 {
   grid-row: 1/2;
   grid-column: 2/3;
   width: 800px;
-  height: 400px;
   background-color: #fff;
   justify-self: center;
   align-self: center;
-  margin: 4rem 0;
-  padding: 1rem 4rem;
+  margin: 2em 0;
+  padding: 2rem 4rem;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 5px;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1); }
   @media only screen and (max-width: 62.5em) {
     .introduction {
-      width: 500px;
-      height: 333px; } }
+      width: 500px; } }
   @media only screen and (max-width: 37.5em) {
     .introduction {
       grid-row: 2/3;
       justify-content: center;
       width: 400px;
-      height: 500px;
       flex-direction: column; } }
   @media only screen and (max-width: 37.5em) {
     .introduction {
       grid-row: 2/3;
       justify-content: center;
       width: 360px;
-      height: 550px;
       flex-direction: column; } }
   @media only screen and (max-width: 20em) {
     .introduction {
       grid-row: 2/3;
       justify-content: center;
       width: 310px;
-      height: 550px;
       flex-direction: column; } }
   .introduction a {
     display: inline;
     text-decoration: none;
-    color: #368cbf;
+    color: #ff0000;
     cursor: pointer; }
   .introduction__img {
     width: 170px;
     height: 260px;
+    margin: 2rem;
     background-color: #7ebc59;
     position: relative;
     padding: 20px;
@@ -580,9 +571,10 @@ h4 {
         width: 90%;
         margin-top: 2rem; } }
   .introduction__text p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 2.8rem;
-    font-weight: 200; }
+    font-weight: 200;
+    text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .introduction__text p {
         font-size: 1.6rem;
@@ -591,16 +583,22 @@ h4 {
       .introduction__text p {
         font-size: 2.2rem;
         line-height: 2.6rem; } }
+  .introduction__text h1 {
+    color: #ff0000;
+    text-align: center;
+    line-height: 3.8rem; }
 
 .ball {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   top: 75%;
-  left: 20%; }
+  left: 20%;
+  display: none; }
 
 .action {
-  animation: grow 4s ease-out forwards; }
+  animation: grow 6s ease-out forwards;
+  display: block; }
 
 .ball img {
   height: 100%;
@@ -609,12 +607,12 @@ h4 {
 @keyframes grow {
   0% {
     transform: scale(1); }
-  30% {
-    transform: scale(14);
+  20% {
+    transform: scale(12);
     opacity: 1;
     top: 50%; }
   100% {
-    transform: scale(14);
+    transform: scale(12);
     top: 50%;
     opacity: 1; } }
 
@@ -630,7 +628,7 @@ h4 {
   box-shadow: 3px 0px 1px 0px rgba(0, 0, 0, 0.4);
   display: grid;
   align-items: center;
-  background-color: #d0eaf8;
+  background-color: #74d680;
   margin: 0 auto;
   grid-template-rows: auto auto auto;
   grid-template-columns: 23rem 1fr; }
@@ -655,23 +653,25 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 2rem; }
   @media only screen and (max-width: 37.5em) {
     .main {
       grid-row: 1/2;
-      margin-top: 4rem; } }
+      margin-top: 2rem; } }
 
 .overlay {
   position: relative;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 800px;
   height: 500px;
   transform: all 5s ease;
   border-radius: 5px;
   box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
   align-self: center;
-  justify-self: center; }
+  justify-self: center;
+  background-color: #368cbf; }
 
 .overlay .after {
   position: absolute;
@@ -696,6 +696,7 @@ h4 {
 .image-text {
   position: absolute;
   font-size: 6rem;
+  line-height: 6rem;
   font-weight: 300;
   text-align: center;
   width: 60%;
@@ -703,13 +704,15 @@ h4 {
   color: white;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: none;
+  align-items: center;
+  justify-content: center;
   transition: all .2s ease;
   z-index: 2000; }
 
 .overlay:hover .image-text {
-  display: block; }
+  display: flex; }
 
 @media only screen and (max-width: 62.5em) {
   .overlay {
@@ -752,14 +755,13 @@ h4 {
   grid-row: 3/4;
   grid-column: 2/3;
   width: 800px;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-self: center;
   text-align: center;
   border-radius: 5px;
-  margin: 4rem 0;
+  margin: 2rem 0;
   padding: 2rem 0rem;
   background-color: #fff;
   justify-content: flex-start;
@@ -780,7 +782,7 @@ h4 {
       height: 300px; } }
   .links__text {
     margin-bottom: 3rem;
-    color: #368cbf;
+    color: #ff0000;
     font-size: 2rem; }
   .links__images {
     display: flex;
@@ -808,8 +810,8 @@ h4 {
   color: #fff;
   padding: 1.5rem 0;
   height: 7rem;
-  background-color: #368cbf;
-  border-top: 1px solid #fff;
+  background-color: #ff0000;
+  border-top: 1px solid #ff0000;
   box-shadow: 3px 0px 1px 0px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 75em) {
     .footer {
@@ -822,4 +824,4 @@ h4 {
       color: #fff; }
 
 #footer a {
-  color: #ffe164; }
+  color: #74d680; }

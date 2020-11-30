@@ -10,8 +10,8 @@
   color: #fff;
   padding: 1.5rem 0;
   height: 7rem;
-  background-color: $color-blue;
-  border-top: 1px solid #fff;
+  background-color: $color-xmas-red;
+  border-top: 1px solid $color-xmas-red;
   box-shadow: $box-shadow-page;
 
   @media only screen and (max-width: $bp-largest){
@@ -33,6 +33,6 @@
 }
 
 #footer a{
-  color: $color-yellow;
+  color: $color-xmas-lightgreen;
 }
 

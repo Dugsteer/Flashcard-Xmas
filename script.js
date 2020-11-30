@@ -4,7 +4,7 @@ const loader = document.getElementById("loaderDiv");
 const extra = document.getElementById('info');
 const ball = document.getElementById('ball');
 const blue = window.matchMedia("(max-width: 800px)");
-const cheers = new Audio('sounds/cheers.mp3');
+const cheers = new Audio('sounds/sleighbells.wav');
 
 function deactivate(){
     ball.classList.remove('action');
@@ -13,7 +13,7 @@ function deactivate(){
 function kickball(){
     ball.classList.add('action');
     cheers.play();
-    setTimeout(deactivate, 2000);
+    setTimeout(deactivate, 3500);
 }
 
 
@@ -23,7 +23,7 @@ function kickball(){
 //Play applause 
 
 function clapping(){
-    const claps = new Audio("sounds/applause.wav");
+    const claps = new Audio("sounds/sleighbells.wav");
     claps.play();
 }
 
@@ -68,35 +68,32 @@ let imageArt = document.getElementById('image-art');
 let imageText = document.getElementById('image-text');
 
 var imageList = [
-    "archery.jpg",
-    "badminton.jpg",
-    "basketball.jpg",
-    "boxing.jpg",
-    "climbing.jpg",
-    "darts.jpg",
-    "diving.jpg",
-    "driving.jpg",
-    "football.jpg",
-    "golf.jpg",
-    "gymnastics.jpg",
-    "hang-gliding.jpg",
-    "hiking.jpg",
-    "hockey.jpg",
-    "horse-riding.jpg",
-    "ice-skating.jpg",
-    "karate.jpg",
-    "paddle-surfing.jpg",
-    "rugby.jpg",
-    "running.jpg",
-    "sailing.jpg",
-    "skiing.jpg",
-    "surfing.jpg",
-    "swimming.jpg",
-    "table-tennis.jpg",
-    "tennis.jpg",
-    "weight-lifting.jpg",
-    "windsurfing.jpg",
-    "yoga.jpg"
+  "wreath.jpg",
+  "angel.jpg",
+  "bells.jpg",
+  "candles.jpg",
+  "candy-cane.jpg",
+  "christmas-card.jpg",
+  "christmas-dinner.jpg",
+  "christmas-tree.jpg",
+  "cracker.jpg",
+  "decorations.jpg",
+  "elf.jpg",
+  "fairy-lights.jpg",
+  "gingerbread-man.jpg",
+  "mistletoe.jpg",
+  "nativity.jpg",
+  "presents.jpg",
+  "reindeer.jpg",
+  "sack.jpg",
+  "santa.jpg",
+  "sleigh.png",
+  "snow-globe.jpg",
+  "snowball.jpg",
+  "snowflake.jpg",
+  "star.jpg",
+  "stockings.jpg",
+  "merry-christmas.jpg"
 ];
 
 
@@ -109,12 +106,12 @@ function goForwards() {
   if (x < imageList.length - 1) {
     x++;
     imageArt.src =  `/img/${imageList[x]}`;
-   imageText.textContent = `${imageList[x].slice(0, -4)}`;
+    imageList[x] === "merry-christmas.jpg" ?  imageText.textContent = "Merry Christmas!" : imageText.textContent =  `${imageList[x].slice(0, -4).toString().replace(/-/g, ' ')}`;
     count.innerHTML = `${x + 1}/${imageList.length}`;
     return x;
   } else {
     imageArt.src = ` /img/${imageList[imageList.length - 1]}`;
-    imageText.textContent = `${imageList[imageList.length - 1].slice(0, -4)}`;
+    imageList[x] === "merry-christmas.jpg" ?  imageText.textContent = "Merry Christmas!" : imageText.textContent =  `${imageList[x].slice(0, -4).toString().replace(/-/g, ' ')}`;
     count.innerHTML = `${imageList.length}/${imageList.length}`;
     x = 0;
     x = imageList.length -1;
@@ -126,12 +123,12 @@ function goBackwards() {
   if (x > 0) {
     x--;
     imageArt.src =  `/img/${imageList[x]}`;
-    imageText.textContent = `${imageList[x].slice(0, -4)}`;
+    imageText.textContent = `${imageList[x].slice(0, -4).toString().replace(/-/g, ' ')}`;
     count.innerHTML = `${x + 1}/${imageList.length}`;
     return x;
   } else {
     imageArt.src = ` /img/${imageList[0]}`;
-    imageText.textContent = `${imageList[0].slice(0, -4)}`;
+    imageText.textContent = `${imageList[0].slice(0, -4).toString().replace(/-/g, ' ')}`;
     count.innerHTML = `${1}/${imageList.length}`;
     x = 0;
     return x;

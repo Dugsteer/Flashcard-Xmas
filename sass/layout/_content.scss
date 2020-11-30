@@ -7,17 +7,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 
     @media only screen and (max-width:$bp-small){
         grid-row: 1/2;
-        margin-top: 4rem;
+        margin-top: 2rem;
         }
 }
 
 .overlay {
     position: relative;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 800px;
     height: 500px;
     transform: all 5s ease;
@@ -25,6 +26,7 @@
     box-shadow: $box-shadow-large;
     align-self: center;
     justify-self: center;
+    background-color: $color-blue;
 }
 
 .overlay .after {
@@ -55,6 +57,7 @@
 .image-text {
             position: absolute;
             font-size: 6rem;
+            line-height: 6rem;
             font-weight: 300;
             text-align: center;
             width: 60%;
@@ -62,8 +65,10 @@
             color:white;
             top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             display: none;
+            align-items: center;
+            justify-content: center;
             transition: all .2s ease;
             z-index: 2000;
 
@@ -72,7 +77,7 @@
     }
         
     .overlay:hover .image-text {
-        display: block;
+        display: flex;
     }
 
 
