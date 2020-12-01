@@ -114,7 +114,6 @@ h4 {
       width: 10rem; } }
 
 .loader-div {
-  background-color: #368cbf;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +124,7 @@ h4 {
   margin: auto;
   top: 0;
   left: 0;
+  background: #ff0000;
   right: 0;
   z-index: 1000; }
   @media only screen and (max-width: 75em) {
@@ -146,42 +146,42 @@ h4 {
     z-index: -1; } }
 
 .loader-container {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
   width: 200px;
-  height: 200px;
-  align-items: center;
-  justify-content: center;
-  z-index: 10; }
+  height: 200px; }
   .loader-container img {
-    height: 60%;
-    width: 60%; }
+    height: 70%;
+    width: 70%;
+    margin-left: 15%; }
 
 .ghost {
-  animation: bounce 1s ease-in-out infinite; }
+  animation: float 3s ease-out infinite; }
 
-@keyframes bounce {
-  0% {
-    top: 15%; }
+@keyframes float {
   50% {
-    top: 50%;
-    width: 230px;
-    height: 190px; }
-  100% {
-    top: 15%;
-    width: 200px;
-    height: 200px; } }
+    transform: translate(0, 20px); } }
 
-.basediv {
-  background-color: #7ebc59;
-  width: 1200px;
-  height: 40%;
-  position: fixed;
-  bottom: 0; }
+.shadowFrame {
+  width: 130px;
+  margin: auto;
+  margin-top: 25px; }
+
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center; }
+
+.shadow ellipse {
+  transform-origin: center center; }
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%; }
+  50% {
+    width: 60%;
+    margin: 0 18%; }
+  100% {
+    width: 90%;
+    margin: 0 5%; } }
 
 .sidebar {
   grid-row: 1/5;
