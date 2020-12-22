@@ -1,154 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fun, free  online sports Christmas flashcards for learning English vocabulary">
-    <meta name="keywords" content="Christmas flashcards ESL online">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fun, free  online sports Christmas flashcards for learning English vocabulary"
+    />
+    <meta name="keywords" content="Christmas flashcards ESL online" />
     <title>Christmas Flashcards</title>
-    <link rel="icon" type="image/png"
-    href="favicon.png";
-  />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png" ; />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="csi.min.js"></script>
-</head>
-<body>
-
-  <div class="loader-div" id="loaderDiv" onload = "checkForTop();">
-    <div class="loader-container ghost">
-      <img src="img/santa.svg" alt=""> 
+  </head>
+  <body>
+    <div class="loader-div" id="loaderDiv" onload="checkForTop();">
+      <div class="loader-container ghost">
+        <img src="img/santa.svg" alt="" />
+      </div>
+      <div class="basediv"></div>
     </div>
-    <div class="basediv"></div>
-  </div>
 
     <div class="nav-bar" id="navbar">
-        <a href="index.html" class="nav-bar__logo">
-          <svg class="icon-header nav-bar__logo-img">
-            <use xlink:href="sprite2.svg#Buho" onclick="scrollUp()">
-            </use>
-          </svg>    </a>
-        <h3 class="nav-bar__title">Esl-Ology.Com</h3>
-        <div class="nav-bar__title-page">
-          <span class="nav-bar__title-page-main" id="pageTitle">CHRISTMAS FLASHCARDS</span>
+      <a href="index.html" class="nav-bar__logo">
+        <svg class="icon-header nav-bar__logo-img">
+          <use xlink:href="sprite2.svg#Buho" onclick="scrollUp()"></use>
+        </svg>
+      </a>
+      <h3 class="nav-bar__title">Esl-Ology.Com</h3>
+      <div class="nav-bar__title-page">
+        <span class="nav-bar__title-page-main" id="pageTitle"
+          >CHRISTMAS FLASHCARDS</span
+        >
       </div>
       <div class="nav-bar__links">
         <a href="index.html" class="nav-bar__link link3">Home</a>
-        <svg viewBox="0 0 100 80" width="40" height="20" onclick="toggler();" id="menu" class="menu">
+        <svg
+          viewBox="0 0 100 80"
+          width="40"
+          height="20"
+          onclick="toggler();"
+          id="menu"
+          class="menu"
+        >
           <rect width="100" height="12"></rect>
           <rect y="30" width="100" height="12"></rect>
           <rect y="60" width="100" height="12"></rect>
-        </svg>     
+        </svg>
       </div>
     </div>
 
     <div id="wrapper" class="wrapper">
-
-          
       <div class="sidebar-container" id="sidebar">
-        <div data-include="sidebar.html">
+        <div data-include="sidebar.html"></div>
+      </div>
+
+      <div class="sense">
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+        <!-- Vertical ad -->
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-client="ca-pub-6192312197226967"
+          data-ad-slot="3073690633"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <div class="introduction">
+        <div class="introduction__img" id="mainpic">
+          <img
+            src="img/tree-with-lights.png"
+            onclick="kickball();"
+            alt="decorative"
+          />
+          <div id="ball" class="ball">
+            <img src="img/reindeer.png" alt="decorative" />
+          </div>
+        </div>
+        <div class="introduction__text">
+          <h1>WONDERFUL CHRISTMAS TIME</h1>
+          <p>
+            'Twas the night before Christmas, <br />When all through the house
+            <br />
+            Not a creature was stirring <br />Except for a mouse <br />The
+            stockings were hung on the chimney with care <br />In the hopes that
+            St. Nicholas soon would be there... <br /><br />
+            <blockquote style="text-align: center; font-size: 1.4rem">
+              — Clement C Moore<i>The Night Before Christmas</i>
+            </blockquote>
+          </p>
         </div>
       </div>
 
-        <div class="introduction">
-          <div class="introduction__img" id="mainpic">
-            <img src="img/tree-with-lights.png" onclick="kickball();" alt="decorative">
-            <div id="ball" class="ball">
-            <img src="img/reindeer.png" alt="decorative">
-            </div>
+      <div class="main">
+        <div id="overlay" class="overlay">
+          <img id="image-art" class="image-art" src="img/wreath.jpg" alt="" />
+          <div class="after"></div>
+          <p id="image-text" class="image-text">wreath</p>
+        </div>
+        <div class="buttons">
+          <div class="buttons__icon" onclick="goBackwards()">
+            <img
+              class="buttons__icon-img arrow1"
+              src="img/right-arrow-red.png"
+              alt=""
+            />
           </div>
-          <div class="introduction__text">
-            <h1>WONDERFUL CHRISTMAS TIME</h1>
-            <p>'Twas the night before Christmas, <br>When all through the house <br> Not a creature was stirring <br>Except for a mouse  <br>The stockings were hung on the chimney with care <br>In the hopes that St. Nicholas soon would be there... <br><br><blockquote style="text-align: center; font-size: 1.4rem;">— Clement C Moore<i>The Night Before Christmas</i></blockquote>  </p>
+          <p class="count" id="count">2/20</p>
+          <div class="buttons__icon" onclick="goForwards()">
+            <img
+              class="buttons__icon-img arrow2"
+              src="img/right-arrow-red.png"
+              alt=""
+            />
           </div>
         </div>
+      </div>
 
-        <div class="main">
-          <div id="overlay" class="overlay">
-            <img id="image-art" class="image-art" src="img/wreath.jpg" alt="">
-            <div class="after">
-            </div>
-              <p id="image-text" class="image-text">wreath</p>
-          </div>
-          <div class="buttons">
-            <div class="buttons__icon" onclick="goBackwards()">
-              <img class="buttons__icon-img arrow1" src="img/right-arrow-red.png" alt="">
-            </div>
-              <p class="count" id="count">2/20</p>
-            <div class="buttons__icon" onclick="goForwards()">
-              <img class="buttons__icon-img arrow2" src="img/right-arrow-red.png" alt="">
-            </div>
-          </div>
-        </div>
+      <div class="sense-bottom">
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+        <!-- Vertical ad -->
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-client="ca-pub-6192312197226967"
+          data-ad-slot="3073690633"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
       <div class="links">
-        <p class="links__text">
-          Try some other TEFL Xmas games.
-        </p>
+        <p class="links__text">Try some other TEFL Xmas games.</p>
         <div class="links__images">
           <div class="links__images-1 figure">
             <a href="matching-xmas.html">
-            <img src="img/MatchingXmas.jpg" alt=""></a>
-              <figcaption>Try a Christmas Matching game</figcaption>
+              <img src="img/MatchingXmas.jpg" alt=""
+            /></a>
+            <figcaption>Try a Christmas Matching game</figcaption>
           </div>
           <div class="links__images-1 figure">
             <a href="bingo-xmas.html">
-            <img src="img/BingoXmas.jpg" alt=""></a>
-              <figcaption>Xmas Bingo with Printable Cards</figcaption>
+              <img src="img/BingoXmas.jpg" alt=""
+            /></a>
+            <figcaption>Xmas Bingo with Printable Cards</figcaption>
           </div>
-      </div>
-
-
-    </div>
-</div>
-    <footer class="footer">
-        <div class="footer__copyright" id="footer">
-          <p>Copyright © 2020 Esl-ology.com & copyright owners.</p>
-          <p>Image credits <a href="sports-flashcard-credits.html">here</a>. Thanks, guys!</p>
         </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__copyright" id="footer">
+        <p>Copyright © 2020 Esl-ology.com & copyright owners.</p>
+        <p>
+          Image credits <a href="sports-flashcard-credits.html">here</a>.
+          Thanks, guys!
+        </p>
+      </div>
     </footer>
 
-  <div class="hidden"><img src="sprite2.svg" style="display: none">
+    <div class="hidden">
+      <img src="sprite2.svg" style="display: none" />
       <script>
-    <!--//--><![CDATA[//><!--
-    var images = new Array();
-      function preload(){
-        for(i=0; i<preload.arguments.length; i++){
-          images[i] = new Image();
-          images[i].src = preload.arguments[i];
+        var images = new Array();
+        function preload() {
+          for (i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+          }
         }
-      }
-    preload(
-      "img/angel.jpg",
-    "img/bells.jpg",
-    "img/candles.jpg",
-    "img/candy-cane.jpg",
-    "img/christmas-card.jpg",
-    "img/christmas-dinner.jpg",
-    "img/christmas-tree.jpg",
-    "img/cracker.jpg",
-    "img/decorations.jpg",
-    "img/elf.jpg",
-    "img/fairy-lights.jpg",
-    "img/gingerbread-man.jpg",
-    "img/mistletoe.jpg",
-    "img/nativity.jpg",
-    "img/presents.jpg",
-    "img/reindeer.jpg",
-    "img/sack.jpg",
-    "img/santa.jpg",
-    "img/sleigh.png",
-    "img/snow-globe.jpg",
-    "img/snowball.jpg",
-    "img/snowflake.jpg",
-    "img/star.jpg",
-    "img/stockings.jpg",
-    "img/wreath.jpg",
-    "img/merry-christmas.jpg"
-    )
-      //--><!]]>
-    </script>
-  </div>
-    
+        preload(
+          "img/angel.jpg",
+          "img/bells.jpg",
+          "img/candles.jpg",
+          "img/candy-cane.jpg",
+          "img/christmas-card.jpg",
+          "img/christmas-dinner.jpg",
+          "img/christmas-tree.jpg",
+          "img/cracker.jpg",
+          "img/decorations.jpg",
+          "img/elf.jpg",
+          "img/fairy-lights.jpg",
+          "img/gingerbread-man.jpg",
+          "img/mistletoe.jpg",
+          "img/nativity.jpg",
+          "img/presents.jpg",
+          "img/reindeer.jpg",
+          "img/sack.jpg",
+          "img/santa.jpg",
+          "img/sleigh.png",
+          "img/snow-globe.jpg",
+          "img/snowball.jpg",
+          "img/snowflake.jpg",
+          "img/star.jpg",
+          "img/stockings.jpg",
+          "img/wreath.jpg",
+          "img/merry-christmas.jpg"
+        );
+      </script>
+    </div>
+
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>

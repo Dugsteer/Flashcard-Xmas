@@ -7,8 +7,9 @@
   // justify-items: center;
   background-color: $color-xmas-lightgreen;
   margin: 0 auto;
-  grid-template-rows:auto auto auto;
+  grid-template-rows:auto auto auto auto auto;
   grid-template-columns: 23rem 1fr;
+  grid-row-gap: 1rem;
   @media only screen and (max-width:$bp-largest){
     width: 100vw;
   }
